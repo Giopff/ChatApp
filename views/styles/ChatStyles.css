@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+}
+
+#Background {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  background-color: rgba(147, 183, 191, 0.55);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  height: 70vh;
+  width: 50vw;
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.item {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 0 2vh 2vh;
+}
+.room {
+  padding: 1vh;
+  color: #394053;
+  font-family: monospace;
+}
+
+.items {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.chat {
+  margin: 2vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  justify-content: flex-end;
+}
+.chat {
+  overflow: hidden;
+}
+
+.message {
+  width: 100%;
+  word-wrap: break-word;
+}
+.self-essage {
+  width: 100%;
+  word-wrap: break-word;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.chat .form {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.chat .form input {
+  width: 100%;
+}
+.self-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+.mes-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.self-message {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border: 2px solid #394053;
+  background-color: #394053;
+  border-radius: 16px;
+  width: 20vw;
+  color: rgba(255, 255, 255, 0.534);
+}
+.message {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-bottom: 0.3vh;
+  margin-top: 0.3vh;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border: 2px solid #394053;
+  background-color: #394053;
+  border-radius: 16px;
+  width: 20vw;
+  color: rgba(255, 255, 255, 0.534);
+}
+button {
+  color: #fff;
+  font-family: inherit;
+  font-size: 1em;
+  background-color: rgb(80, 90, 116);
+  border: 0;
+  border-radius: 0 8px 8px 0;
+  border: 2px solid rgb(80, 90, 116);
+  transition: 200ms all ease-in;
+}
+button:hover {
+  background-color: rgba(80, 90, 116, 0.55);
+  border: 2px solid rgba(80, 90, 116, 0.55);
+}
+
+input[type="text"] {
+  border: 2px solid rgb(80, 90, 116);
+  border-right: 0;
+  border-radius: 8px 0px 0px 8px;
+  transition: 200ms all ease-in;
+  padding-left: 8px;
+  color: rgba(78, 87, 110, 0.918);
+  background-color: transparent;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid rgba(80, 90, 116, 0.55);
+}
+
+.self-nametag {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  font-size: 12px;
+  margin-right: 12px;
+}
+.nametag {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.9);
+}

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+}
+
+#Background {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  background-color: rgba(147, 183, 191, 0.55);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  height: 25vh;
+  width: 40vw;
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.card:hover .gradient {
+  opacity: 1;
+  z-index: 1;
+  background-color: (147, 183, 191, 0.55);
+}
+
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.item {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  opacity: 0.75;
+}
+
+.shadows {
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: -15px 5px 20px #394053;
+  color: #394053;
+  opacity: 0.75;
+  letter-spacing: -0.05em;
+  font-family: "Anton", Arial, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+  font-size: 10vw;
+  transition: all 0.25s ease-out;
+  z-index: 2;
+}
+
+.shadows:hover {
+  text-shadow: -16px 6px 15px #394053;
+  opacity: 0.75;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+.form {
+  width: 25vw;
+  padding: 6vh 15px 24px;
+  margin: 0 auto;
+  z-index: 2;
+}
+#register {
+  margin-left: 7vw;
+  font-family: "Anton", Arial, sans-serif;
+  color: #505a74;
+}
+.form .control {
+  margin: 0 0 24px;
+}
+.form .control input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  background: transparent;
+  color: #d4f5f5;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+.form .control input:hover,
+.form .control input:focus {
+  outline: none;
+  border: 0;
+}
+.form .btn {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #d4f5f5;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.block-cube {
+  position: relative;
+}
+.block-cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: #505a74;
+  background: #505a74;
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+}
+.block-cube .bg-top .bg-inner {
+  bottom: 0;
+}
+.block-cube .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #505a74;
+  background: #505a74;
+}
+.block-cube .bg-right {
+  position: absolute;
+  background: #505a74;
+  background: #505a74;
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+}
+.block-cube .bg-right .bg-inner {
+  left: 0;
+}
+.block-cube .bg .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+.block-cube .bg-inner {
+  background: #212121;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.block-cube .text {
+  position: relative;
+  z-index: 2;
+}
+.block-cube.block-input input {
+  position: relative;
+  z-index: 2;
+}
+.block-cube.block-input input:focus ~ .bg-right .bg-inner,
+.block-cube.block-input input:focus ~ .bg-top .bg-inner,
+.block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+  top: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.block-cube.block-input .bg-top,
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease-in-out;
+}
+.block-cube.block-input .bg-right .bg-inner,
+.block-cube.block-input .bg-top .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+.block-cube.block-input:focus .bg-top,
+.block-cube.block-input:focus .bg-right,
+.block-cube.block-input:focus .bg,
+.block-cube.block-input:hover .bg-top,
+.block-cube.block-input:hover .bg-right,
+.block-cube.block-input:hover .bg {
+  background: rgba(255, 255, 255, 0.8);
+}
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+  top: 100%;
+}
+
+.credits {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15px 15px;
+  width: 100%;
+  z-index: 111;
+}
+.credits a {
+  opacity: 0.6;
+  color: #d4f5f5;
+  font-size: 11px;
+  text-decoration: none;
+}
+.credits a:hover {
+  opacity: 1;
+}

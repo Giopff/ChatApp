@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="Background"></div>
+
+    <div class="item">
+      <div class="shadows">
+        <span>C</span><span>h</span><span>a</span><span>T</span> <span>A</span
+        ><span>p</span><span>p</span>
+      </div>
+      <div class="card">
+        <div class="gradient">
+          <form action="http://localhost:3000/chat" class="form" id="form-id">
+            <div class="control block-cube block-input">
+              <input name="username" placeholder="Username" type="text" />
+              <div class="bg-top">
+                <div class="bg-inner"></div>
+              </div>
+              <div class="bg-right">
+                <div class="bg-inner"></div>
+              </div>
+              <div class="bg">
+                <div class="bg-inner"></div>
+              </div>
+            </div>
+            <button
+              class="btn block-cube block-cube-hover"
+              type="button"
+              onclick="submit"
+              id="your-id"
+            >
+              <div class="bg-top">
+                <div class="bg-inner"></div>
+              </div>
+              <div class="bg-right">
+                <div class="bg-inner"></div>
+              </div>
+              <div class="bg">
+                <div class="bg-inner"></div>
+              </div>
+              <div class="text">Join</div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="mainApp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#Background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x394053,
+        backgroundColor: 0xd4f5f5,
+        points: 13.0,
+        maxDistance: 24.0,
+        spacing: 16.0,
+        showDots: false,
+      });
+    </script>
+  </body>
+</html>

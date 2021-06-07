@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles/ChatStyles.css" />
+  </head>
+  <body>
+    <div id="Background"></div>
+    <div class="item">
+      <div class="card">
+        <div class="items">
+          <div class="chat">
+            <div class="messages" id="messages"></div>
+            <div class="form">
+              <input type="text" name="text" id="text" autocomplete="off" />
+              <button
+                onclick="sendMessage();scrollToBottom('messages');"
+                id="myBtn"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+    <script>
+      VANTA.FOG({
+        el: "#Background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        highlightColor: 0x394053,
+        midtoneColor: 0x93b7bf,
+        lowlightColor: 0x394053,
+        baseColor: 0xd4f5f5,
+      });
+    </script>
+  </body>
+</html>
